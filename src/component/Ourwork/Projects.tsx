@@ -35,8 +35,14 @@ import { CircleArrowLeft } from 'lucide-react';
 import { X } from 'lucide-react';
 import './work.css'
 
+type ItemData  = {
+  thumbnail: string;
+  title: string;
+  imgs: string[];
+};
 
-const itemData = [
+
+const itemData: ItemData[] = [
   {
     thumbnail: img1,
     title: "Bed",
@@ -131,7 +137,7 @@ export default function Project() {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   // Open modal and set images
-  const handleClickOpen = (imgs) => {
+  const handleClickOpen = (imgs: string[] ) => {
     if (imgs && imgs.length > 0) {
       setCurrentImages(imgs);
       setCurrentIndex(0);
