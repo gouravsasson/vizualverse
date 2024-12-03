@@ -1,4 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+import { defineConfig } from 'vite';
+
+
+export default defineConfig({
+	assetsInclude: ['**/*.JPG'],
+  });
+  
 const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
     darkMode: ["class"],

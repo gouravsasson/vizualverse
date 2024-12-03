@@ -1,6 +1,8 @@
 import Navbar from "./component/Navbar";
 import Hero from "./component/Hero";
-import Ourwork from "./component/Ourwork";
+import Ourwork from "./component/Ourwork/Ourwork";
+import Service from "./component/Ourservices/Service";
+import Footer  from "./component/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +18,12 @@ function App() {
         </div>
         <div className="w-screen bg-black flex flex-col">
           <Ourwork />
+        </div>
+        <div className="w-screen bg-black flex flex-col">
+          <Service />
+        </div>
+        <div className="w-screen bg-black flex flex-col">
+          <Footer/>
         </div>
       </div>
     </>
