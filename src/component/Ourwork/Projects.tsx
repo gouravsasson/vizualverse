@@ -131,9 +131,9 @@ const itemData: ItemData[] = [
 ];
 
 export default function Project() {
-  const [open, setOpen] = useState(false);
-  const [currentImages, setCurrentImages] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [open, setOpen] = useState<boolean>(false);
+  const [currentImages, setCurrentImages] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   // Open modal and set images
