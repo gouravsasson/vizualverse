@@ -30,9 +30,9 @@ import img23 from "../../assets/Website_Input/Interior 8/IMG_0070.webp";
 import img24 from "../../assets/Website_Input/Interior 8/IMG_0077.webp";
 import img25 from "../../assets/Website_Input/Interior 9/3_Bedroom.jpg";
 import img26 from "../../assets/Website_Input/Interior 9/Insta_post.jpg";
-import { UilArrowCircleLeft } from "@iconscout/react-unicons";
-import { UilArrowCircleRight } from "@iconscout/react-unicons";
-import { UilTimes } from "@iconscout/react-unicons";
+import { CircleChevronRight } from 'lucide-react';
+import { CircleArrowLeft } from 'lucide-react';
+import { X } from 'lucide-react';
 import './work.css'
 
 
@@ -164,15 +164,15 @@ export default function Project() {
     <>
       {open && (
         <div className="sliderWrap">
-          <UilTimes
+          <X
             className="btnClose"
             onClick={handleCloseModal}
           />
-          <UilArrowCircleLeft
+          <CircleArrowLeft
             className="btnPrev"
             onClick={prevSlide}
           />
-          <UilArrowCircleRight
+          <CircleChevronRight
             className="btnNext"
             onClick={nextSlide}
           />
