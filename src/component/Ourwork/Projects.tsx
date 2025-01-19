@@ -5,130 +5,84 @@ import {
   ImageListItem,
   useMediaQuery,
 } from "@mui/material";
-import img1 from "../../assets/Website_Input/Exterior 1/EXT 03-Night.jpg";
-import img2 from "../../assets/Website_Input/Exterior 1/BLG-EX-03-0711.jpg";
-import img3 from "../../assets/Website_Input/Exterior 2/Roof 1_Pool.jpg";
-import img4 from "../../assets/Website_Input/Exterior 2/Roof 3-Amenity-0704.jpg";
-import img5 from "../../assets/Website_Input/Exterior 3/BLG-EX-12-0711.jpg";
-import img6 from "../../assets/Website_Input/Exterior 4/AURA-C2-Hero-0225.jpg";
-import img7 from "../../assets/Website_Input/Exterior 4/AURA-C3-Hero 02-0225.jpg";
-import img8 from "../../assets/Website_Input/Exterior 5/AURA-C1-Aerial-0224.jpg";
-import img9 from "../../assets/Website_Input/Exterior 6/AURA-C10-Building Close Up-0225.jpg";
-import img27 from "../../assets/Website_Input/Exterior 7/AURA-C9-Pool-0225.jpg";
-import img11 from "../../assets/Website_Input/Exterior 8/182.jpg";
-import img12 from "../../assets/Website_Input/Exterior 8/183.jpg";
-import img13 from "../../assets/Website_Input/Interior 1/9.jpg";
-import img14 from "../../assets/Website_Input/Interior 2/12.jpg";
-import img15 from "../../assets/Website_Input/Interior 3/38.jpg";
-import img16 from "../../assets/Website_Input/Interior 3/41.jpg";
-import img17 from "../../assets/Website_Input/Interior 4/55.jpg";
-import img19 from "../../assets/Website_Input/Interior 5/146.jpg";
-import img20 from "../../assets/Website_Input/Interior 6/152.jpg";
-import img21 from "../../assets/Website_Input/Interior 6/153.jpg";
-import img22 from "../../assets/Website_Input/Interior 7/WhatsApp Image 2024-04-23 at 20.00.13_7a339b71.jpg";
-import img23 from "../../assets/Website_Input/Interior 8/IMG_0070.webp";
-import img24 from "../../assets/Website_Input/Interior 8/IMG_0077.webp";
-import img25 from "../../assets/Website_Input/Interior 9/3_Bedroom.jpg";
-import img26 from "../../assets/Website_Input/Interior 9/Insta_post.jpg";
+import ext1 from "../../assets/New/Exterior/1.jpg";
+import ext2 from "../../assets/New/Exterior/2.jpg"
+import ext3 from "../../assets/New/Exterior/3.jpg" 
+import ext4 from "../../assets/New/Exterior/4.jpg"
+import ext5 from "../../assets/New/Exterior/5.jpg"
+import ext6 from "../../assets/New/Exterior/6.jpg"
+import ext7 from "../../assets/New/Exterior/7.jpg"
+import ext8 from "../../assets/New/Exterior/8.jpg"
+import ext9 from "../../assets/New/Exterior/9.jpg" 
+import ext10 from "../../assets/New/Exterior/10.jpg"
+import ext11 from "../../assets/New/Exterior/11.jpg"
+import ext12 from "../../assets/New/Exterior/12.jpg"
+import ext13 from "../../assets/New/Exterior/13.jpg"
+import ext14 from "../../assets/New/Exterior/14.jpg"
+import ext15 from "../../assets/New/Exterior/15.jpg"
+import ext16 from "../../assets/New/Exterior/16.jpg"
+import ext17 from "../../assets/New/Exterior/17.jpg"
+import ext18 from "../../assets/New/Exterior/18.jpg"
+import ext19 from "../../assets/New/Exterior/19.jpg"
+import int1 from "../../assets/New/Interior/1.jpg";
+import int2 from "../../assets/New/Interior/2.jpg";
+import int3 from "../../assets/New/Interior/3.jpg";
+import int4 from "../../assets/New/Interior/4.jpg";
+import int5 from "../../assets/New/Interior/5.jpg";
+import int6 from "../../assets/New/Interior/6.jpg";
+import int7 from "../../assets/New/Interior/7.jpg";
+import int8 from "../../assets/New/Interior/8.jpg";
+import int9 from "../../assets/New/Interior/9.jpg";
+import int10 from "../../assets/New/Interior/10.jpg";
+import int11 from "../../assets/New/Interior/11.jpg";
+import int12 from "../../assets/New/Interior/12.jpg";
+import int13 from "../../assets/New/Interior/13.jpg";
+import int14 from "../../assets/New/Interior/14.jpg";
+import int15 from "../../assets/New/Interior/15.jpg";
+import int16 from "../../assets/New/Interior/16.jpg";
+import int17 from "../../assets/New/Interior/17.jpg";
+import int18 from "../../assets/New/Interior/18.jpg";
+import int19 from "../../assets/New/Interior/19.jpg";
+// import int20 from "../../assets/New/Interior/20.jpg";
+import int21 from "../../assets/New/Interior/21.webp";
+// import int22 from "../../assets/New/Interior/";
+import int23 from "../../assets/New/Interior/23.webp";
+import int24 from "../../assets/New/Interior/24.jpg";
+import int25 from "../../assets/New/Interior/25.jpg";
+
+
 import { CircleChevronRight } from 'lucide-react';
 import { CircleArrowLeft } from 'lucide-react';
 import { X } from 'lucide-react';
 import './work.css'
 
-type ItemData  = {
+
+interface ItemData {
   thumbnail: string;
-  title: string;
-  imgs: string[];
-};
+  imgs: string;
+}
 
 
 const itemData: ItemData[] = [
-  {
-    thumbnail: img1,
-    title: "Bed",
-    imgs: [img1, img2],
-  },
-  {
-    thumbnail: img3,
-    imgs: [img3, img4],
-    title: "Books",
-  },
-  {
-    thumbnail: img5,
-    imgs: [img5],
-    title: "Sink",
-  },
-  {
-    thumbnail: img6,
-    imgs: [img6, img7],
-    title: "Kitchen",
-  },
-  {
-    thumbnail: img8,
-    imgs: [img8],
-    title: "Blinds",
-  },
-  {
-    thumbnail: img9,
-    imgs: [img9],
-    title: "Chairs",
-  },
-  {
-    thumbnail: img27,
-    imgs: [img27],
-    title: "Laptop",
-  },
-  {
-    thumbnail: img11,
-    imgs: [img11, img12],
-    title: "Doors",
-  },
-  {
-    thumbnail: img13,
-    imgs: [],
-    title: "Coffee",
-  },
-  {
-    thumbnail: img14,
-    imgs: [img14],
-    title: "Storage",
-  },
-  {
-    thumbnail: img15,
-    imgs: [img15, img16],
-    title: "Candle",
-  },
-  {
-    thumbnail: img17,
-    imgs: [img17],
-    title: "Coffee table",
-  },
-  {
-    thumbnail: img19,
-    imgs: [img19],
-    title: "Coffee table",
-  },
-  {
-    thumbnail: img20,
-    imgs: [img20, img21],
-    title: "Coffee table",
-  },
-  {
-    thumbnail: img22,
-    imgs: [img22],
-    title: "Coffee table",
-  },
-  {
-    thumbnail: img23,
-    imgs: [img23, img24],
-    title: "Coffee table",
-  },
-  {
-    thumbnail: img25,
-    imgs: [img25, img26],
-    title: "Coffee table",
-  },
+  
+  ...[
+    ext1, ext2, ext3, ext4, ext5, ext6, ext7, ext8, ext9, ext10,
+    ext11, ext12, ext13, ext14, ext15, ext16, ext17, ext18, ext19,
+  ].map((img) => ({
+    thumbnail: img,
+    imgs: img,
+  })),
+
+  
+  ...[
+    int1, int2, int3, int4, int5, int6, int7, int8, int9, int10,
+    int11, int12, int13, int14, int15, int16, int17, int18, int19, int21, int23, int24, int25,
+  ].map((img) => ({
+    thumbnail: img,
+    imgs: img,
+  })),
 ];
+
 
 export default function Project() {
   const [open, setOpen] = useState<boolean>(false);
@@ -194,7 +148,7 @@ export default function Project() {
             <ImageListItem key={index}>
               <img
                 src={item.thumbnail}
-                alt={item.title}
+                alt={index}
                 loading="lazy"
                 style={{
                   cursor: item.imgs.length > 0 ? "pointer" : "default",
