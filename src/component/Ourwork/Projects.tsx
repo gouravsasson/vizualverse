@@ -114,7 +114,7 @@ export default function Project() {
     {itemData.map((item, index) => {
       // Create a ref for each image
       const ref = useRef(null);
-      const isInView = useInView(ref, { threshold: 0.1 }); // Animation triggers when 10% is visible
+      const isInView = useInView(ref, { }); // Animation triggers when 10% is visible
 
       return (
         <motion.div
