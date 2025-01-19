@@ -7,48 +7,48 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import ext1 from "../../assets/New/Exterior/1.jpg";
-import ext2 from "../../assets/New/Exterior/2.jpg";
-import ext3 from "../../assets/New/Exterior/3.jpg";
-import ext4 from "../../assets/New/Exterior/4.jpg";
-import ext5 from "../../assets/New/Exterior/5.jpg";
-import ext6 from "../../assets/New/Exterior/6.jpg";
-import ext7 from "../../assets/New/Exterior/7.jpg";
-import ext8 from "../../assets/New/Exterior/8.jpg";
-import ext9 from "../../assets/New/Exterior/9.jpg";
-import ext10 from "../../assets/New/Exterior/10.jpg";
-import ext11 from "../../assets/New/Exterior/11.jpg";
-import ext12 from "../../assets/New/Exterior/12.jpg";
-import ext13 from "../../assets/New/Exterior/13.jpg";
-import ext14 from "../../assets/New/Exterior/14.jpg";
-import ext15 from "../../assets/New/Exterior/15.jpg";
-import ext16 from "../../assets/New/Exterior/16.jpg";
-import ext17 from "../../assets/New/Exterior/17.jpg";
-import ext18 from "../../assets/New/Exterior/18.jpg";
-import ext19 from "../../assets/New/Exterior/19.jpg";
-import int1 from "../../assets/New/Interior/1.jpg";
-import int2 from "../../assets/New/Interior/2.jpg";
-import int3 from "../../assets/New/Interior/3.jpg";
-import int4 from "../../assets/New/Interior/4.jpg";
-import int5 from "../../assets/New/Interior/5.jpg";
-import int6 from "../../assets/New/Interior/6.jpg";
-import int7 from "../../assets/New/Interior/7.jpg";
-import int8 from "../../assets/New/Interior/8.jpg";
-import int9 from "../../assets/New/Interior/9.jpg";
-import int10 from "../../assets/New/Interior/10.jpg";
-import int11 from "../../assets/New/Interior/11.jpg";
-import int12 from "../../assets/New/Interior/12.jpg";
-import int13 from "../../assets/New/Interior/13.jpg";
-import int14 from "../../assets/New/Interior/14.jpg";
-import int15 from "../../assets/New/Interior/15.jpg";
-import int16 from "../../assets/New/Interior/16.jpg";
-import int17 from "../../assets/New/Interior/17.jpg";
-import int18 from "../../assets/New/Interior/18.jpg";
-import int19 from "../../assets/New/Interior/19.jpg";
+import ext1 from "../../assets/New/Exterior/1.webp";
+import ext2 from "../../assets/New/Exterior/2.webp";
+import ext3 from "../../assets/New/Exterior/3.webp";
+import ext4 from "../../assets/New/Exterior/4.webp";
+import ext5 from "../../assets/New/Exterior/5.webp";
+import ext6 from "../../assets/New/Exterior/6.webp";
+import ext7 from "../../assets/New/Exterior/7.webp";
+import ext8 from "../../assets/New/Exterior/8.webp";
+import ext9 from "../../assets/New/Exterior/9.webp";
+import ext10 from "../../assets/New/Exterior/10.webp";
+import ext11 from "../../assets/New/Exterior/11.webp";
+import ext12 from "../../assets/New/Exterior/12.webp";
+import ext13 from "../../assets/New/Exterior/13.webp";
+import ext14 from "../../assets/New/Exterior/14.webp";
+import ext15 from "../../assets/New/Exterior/15.webp";
+import ext16 from "../../assets/New/Exterior/16.webp";
+import ext17 from "../../assets/New/Exterior/17.webp";
+import ext18 from "../../assets/New/Exterior/18.webp";
+import ext19 from "../../assets/New/Exterior/19.webp";
+import int1 from "../../assets/New/Interior/1.webp";
+import int2 from "../../assets/New/Interior/2.webp";
+import int3 from "../../assets/New/Interior/3.webp";
+import int4 from "../../assets/New/Interior/4.webp";
+import int5 from "../../assets/New/Interior/5.webp";
+import int6 from "../../assets/New/Interior/6.webp";
+import int7 from "../../assets/New/Interior/7.webp";
+import int8 from "../../assets/New/Interior/8.webp";
+import int9 from "../../assets/New/Interior/9.webp";
+import int10 from "../../assets/New/Interior/10.webp";
+import int11 from "../../assets/New/Interior/11.webp";
+import int12 from "../../assets/New/Interior/12.webp";
+import int13 from "../../assets/New/Interior/13.webp";
+import int14 from "../../assets/New/Interior/14.webp";
+import int15 from "../../assets/New/Interior/15.webp";
+import int16 from "../../assets/New/Interior/16.webp";
+import int17 from "../../assets/New/Interior/17.webp";
+import int18 from "../../assets/New/Interior/18.webp";
+import int19 from "../../assets/New/Interior/19.webp";
 import int21 from "../../assets/New/Interior/21.webp";
 import int23 from "../../assets/New/Interior/23.webp";
-import int24 from "../../assets/New/Interior/24.jpg";
-import int25 from "../../assets/New/Interior/25.jpg";
+import int24 from "../../assets/New/Interior/24.webp";
+import int25 from "../../assets/New/Interior/25.webp";
 
 import { X } from "lucide-react";
 import "./work.css";
@@ -131,7 +131,7 @@ export default function Project() {
             <img
               src={item.thumbnail}
               alt={`Image ${index + 1}`}
-              loading="lazy"
+              // loading="lazy"
               style={{
                 cursor: "pointer",
               }}

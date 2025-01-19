@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 function Hero() {
-  const [currentIndex, setCurrentIndex] = useState(3);
+  const [currentIndex, setCurrentIndex] = useState(0); // Start with the first slide immediately
 
   const slides = [
     {
@@ -46,15 +46,21 @@ function Hero() {
             <span className="text-4xl font-bold">At Vizualverse, </span>
             <span className="text-2xl">we understand that every design has a </span>
             <br />
-            <span className="text-2xl">story to tell, and our mission is to bring that story to life through </span>{" "} <br />
+            <span className="text-2xl">
+              story to tell, and our mission is to bring that story to life through
+            </span>{" "}
+            <br />
             <span className="text-2xl">visuals that inspire and engage. With a focus on</span>{" "}
             <span className="text-2xl">
               <span className="text-4xl font-extrabold text-[#424241] capitalize">
-              QUALITY, <br />CREATIVITY, AND ATTENTION TO DETAIL,
+                QUALITY, <br />
+                CREATIVITY, AND ATTENTION TO DETAIL,
               </span>{" "}
-            </span><br />
+            </span>
+            <br />
             <span className="text-4xl font-bold">
-            we  transform concepts into stunning <br /> visual experiences that leave a lasting <br /> impression.
+              we transform concepts into stunning <br /> visual experiences that leave a lasting
+              <br /> impression.
             </span>
           </p>
         </>
@@ -64,9 +70,9 @@ function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length); 
-    }, 5000); 
-    return () => clearInterval(interval);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length); // Loop through slides
+    }, 5000); // 5 seconds interval
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, [slides.length]);
 
   return (
