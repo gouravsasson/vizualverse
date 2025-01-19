@@ -5,6 +5,8 @@ import {
   ImageListItem,
   useMediaQuery,
 } from "@mui/material";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import ext1 from "../../assets/New/Exterior/1.jpg";
 import ext2 from "../../assets/New/Exterior/2.jpg";
 import ext3 from "../../assets/New/Exterior/3.jpg";
@@ -50,6 +52,7 @@ import int25 from "../../assets/New/Interior/25.jpg";
 
 import { X } from "lucide-react";
 import "./work.css";
+import { useRef } from "react";
 
 // Define the ItemData type
 interface ItemData {
@@ -106,23 +109,40 @@ export default function Project() {
         </div>
       )}
 
-      <Box className="w-full">
-        <ImageList variant="masonry" cols={isSmallScreen ? 2 : 3} gap={16}>
-          {itemData.map((item, index) => (
-            <ImageListItem key={index}>
-              <img
-                src={item.thumbnail}
-                alt={`Image ${index + 1}`}
-                loading="lazy"
-                style={{
-                  cursor: "pointer",
-                }}
-                onClick={() => handleClickOpen(item.imgs)}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Box>
+<Box className="w-full">
+  <ImageList variant="masonry" cols={isSmallScreen ? 2 : 3} gap={16}>
+    {itemData.map((item, index) => {
+      // Create a ref for each image
+      const ref = useRef(null);
+      const isInView = useInView(ref, { threshold: 0.1 }); // Animation triggers when 10% is visible
+
+      return (
+        <motion.div
+          key={index}
+          ref={ref} // Attach ref to the motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}} // Only animate when in view
+          transition={{
+            duration: 0.5,
+            delay: index * 0.1, // Optional stagger effect
+          }}
+        >
+          <ImageListItem>
+            <img
+              src={item.thumbnail}
+              alt={`Image ${index + 1}`}
+              loading="lazy"
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => handleClickOpen(item.imgs)}
+            />
+          </ImageListItem>
+        </motion.div>
+      );
+    })}
+  </ImageList>
+</Box>
     </>
   );
 }
