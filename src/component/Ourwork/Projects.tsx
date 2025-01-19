@@ -57,13 +57,13 @@ import { X } from 'lucide-react';
 import './work.css'
 
 
-interface ItemData {
-  thumbnail: string;
-  imgs: string;
-}
+// interface ItemData {
+//   thumbnail: string;
+//   imgs: string;
+// }
 
 
-const itemData: ItemData[] = [
+const itemData = [
   
   ...[
     ext1, ext2, ext3, ext4, ext5, ext6, ext7, ext8, ext9, ext10,
@@ -86,15 +86,14 @@ const itemData: ItemData[] = [
 
 export default function Project() {
   const [open, setOpen] = useState<boolean>(false);
-  const [currentImages, setCurrentImages] = useState<string[]>([]);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentImages, setCurrentImages] = useState(null);
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   // Open modal and set images
-  const handleClickOpen = (imgs: string[] ) => {
+  const handleClickOpen = (imgs ) => {
     if (imgs && imgs.length > 0) {
       setCurrentImages(imgs);
-      setCurrentIndex(0);
+      
       setOpen(true);
     }
   };
@@ -102,23 +101,12 @@ export default function Project() {
   
   const handleCloseModal = () => {
     setOpen(false);
-    setCurrentImages([]);
-    setCurrentIndex(0);
+    setCurrentImages(null);
+    
   };
 
   
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? currentImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === currentImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+ 
 
   return (
     <>
@@ -128,16 +116,16 @@ export default function Project() {
             className="btnClose"
             onClick={handleCloseModal}
           />
-          <CircleArrowLeft
+          {/* <CircleArrowLeft
             className="btnPrev"
             onClick={prevSlide}
           />
           <CircleChevronRight
             className="btnNext"
             onClick={nextSlide}
-          />
+          /> */}
           <div className="fullScreenImage">
-            <img src={currentImages[currentIndex]} alt={`Slide ${currentIndex}`} />
+            <img src={currentImages} alt={"gg"} />
           </div>
         </div>
       )}
