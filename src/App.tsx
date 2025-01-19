@@ -49,7 +49,7 @@ function App() {
         <div id="ourwork" className="w-screen bg-black flex flex-col">
           <Ourwork />
         </div>
-        <div className="w-screen bg-black flex flex-col">
+        <div id="whatwedo" className="w-screen bg-black flex flex-col">
           <Service />
         </div>
         <div className="w-screen bg-black flex flex-col">
