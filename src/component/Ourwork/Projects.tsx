@@ -48,7 +48,7 @@ import lowext19 from "../../assets/lowres/Exterior/19.webp";
 import int1 from "../../assets/New/Interior/1.webp";
 import int2 from "../../assets/New/Interior/2.webp";
 import int3 from "../../assets/New/Interior/3.webp";
-import int4 from "../../assets/New/Interior/4.webp";
+// import int4 from "../../assets/New/Interior/4.webp";
 import int5 from "../../assets/New/Interior/5.webp";
 import int6 from "../../assets/New/Interior/6.webp";
 import int7 from "../../assets/New/Interior/7.webp";
