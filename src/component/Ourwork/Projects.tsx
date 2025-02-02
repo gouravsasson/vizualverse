@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  Box,
-  ImageList,
-  ImageListItem,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, ImageList, ImageListItem, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import ext1 from "../../assets/New/Exterior/1.webp";
@@ -91,7 +86,6 @@ import lowint21 from "../../assets/lowres/Interior/21.webp";
 import lowint23 from "../../assets/lowres/Interior/23.webp";
 import lowint24 from "../../assets/lowres/Interior/24.webp";
 import lowint25 from "../../assets/lowres/Interior/25.webp";
-
 
 import { X } from "lucide-react";
 import "./work.css";
@@ -197,13 +191,13 @@ export default function Project() {
 
             return (
               <motion.div
-                key={index}
-                ref={ref} // Attach ref to the motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{
-                  duration: 0.5,
-                }}
+              // key={index}
+              // ref={ref} // Attach ref to the motion.div
+              // initial={{ opacity: 0, scale: 0.9 }}
+              // animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              // transition={{
+              //   duration: 0.5,
+              // }}
               >
                 <ImageListItem>
                   <img
