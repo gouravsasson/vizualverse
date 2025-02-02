@@ -89,7 +89,7 @@ import lowint25 from "../../assets/lowres/Interior/25.webp";
 
 import { X } from "lucide-react";
 import "./work.css";
-import { useRef } from "react";
+// import { useRef } from "react";
 
 // Define the ItemData type
 interface ItemData {
