@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, ImageList, ImageListItem, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+// import { useInView } from "framer-motion";
 import ext1 from "../../assets/New/Exterior/1.webp";
 import ext2 from "../../assets/New/Exterior/2.webp";
 import ext3 from "../../assets/New/Exterior/3.webp";
@@ -186,8 +186,8 @@ export default function Project() {
         <ImageList variant="masonry" cols={isSmallScreen ? 2 : 3} gap={16}>
           {itemData.map((item, index) => {
             // Create a ref for each image
-            const ref = useRef(null);
-            const isInView = useInView(ref, {}); // Animation triggers when in view
+            // const ref = useRef(null);
+            // const isInView = useInView(ref, {}); // Animation triggers when in view
 
             return (
               <motion.div
