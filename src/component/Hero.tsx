@@ -1,8 +1,10 @@
+"use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 function Hero() {
-  const [currentIndex, setCurrentIndex] = useState(0); // Start with the first slide immediately
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
     {
@@ -10,8 +12,7 @@ function Hero() {
       content: (
         <>
           <p>
-            <span className="text-4xl font-bold">"Bringing Ideas to Life with 3D Precision"</span>
-            {/* <span className="text-2xl">a team of architects, 3D modellers, urban designers,</span> */}
+            <span className="text-4xl font-bold">&quot;Bringing Ideas to Life with 3D Precision&quot;</span>
           </p>
         </>
       ),
@@ -32,7 +33,7 @@ function Hero() {
               </span>{" "}
             </span>
             <span className="text-4xl font-bold">
-              for architects, interior designers, and developers.
+              for architects, interior designers, and developers.
             </span>
           </p>
         </>
@@ -60,7 +61,7 @@ function Hero() {
             <br />
             <span className="text-4xl font-bold">
               we transform concepts into stunning <br /> visual experiences that leave a lasting
-              <br /> impression.
+              <br /> impression.
             </span>
           </p>
         </>
@@ -70,9 +71,9 @@ function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length); // Loop through slides
-    }, 5000); // 5 seconds interval
-    return () => clearInterval(interval); // Cleanup interval on unmount
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, [slides.length]);
 
   return (

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx next:*)",
+      "Bash(node --env-file=.env scripts/upload-to-cloudinary.mjs)",
+      "Bash(node --env-file=.env -e \":*)",
+      "Bash(sips -s format jpeg -s formatOptions 80 /tmp/ext12.webp --out /tmp/ext12.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/ext12.webp)",
+      "Bash(sips --resampleWidth 3000 -s format jpeg -s formatOptions 85 /tmp/ext12.webp --out /tmp/ext12_resized.jpg)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}
